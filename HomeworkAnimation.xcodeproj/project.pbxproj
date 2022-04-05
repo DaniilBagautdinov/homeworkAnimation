@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		A5C82EA327FCB059003931EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EA227FCB059003931EE /* AppDelegate.swift */; };
 		A5C82EA527FCB059003931EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EA427FCB059003931EE /* SceneDelegate.swift */; };
-		A5C82EA727FCB059003931EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EA627FCB059003931EE /* ViewController.swift */; };
+		A5C82EA727FCB059003931EE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EA627FCB059003931EE /* MainViewController.swift */; };
 		A5C82EAA27FCB059003931EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C82EA827FCB059003931EE /* Main.storyboard */; };
 		A5C82EAC27FCB05A003931EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C82EAB27FCB05A003931EE /* Assets.xcassets */; };
 		A5C82EAF27FCB05A003931EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C82EAD27FCB05A003931EE /* LaunchScreen.storyboard */; };
+		A5C82EB727FCB1CB003931EE /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EB627FCB1CB003931EE /* ImageViewController.swift */; };
+		A5C82EBA27FCB408003931EE /* DismissInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EB927FCB408003931EE /* DismissInteractionController.swift */; };
+		A5C82EBC27FCB422003931EE /* DismissImageAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EBB27FCB422003931EE /* DismissImageAnimation.swift */; };
+		A5C82EBE27FCB436003931EE /* ImagePresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EBD27FCB436003931EE /* ImagePresentationAnimator.swift */; };
+		A5C82EC027FCB447003931EE /* ImagePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EBF27FCB447003931EE /* ImagePresentationController.swift */; };
+		A5C82EC227FCB454003931EE /* ImageTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C82EC127FCB454003931EE /* ImageTransitioningDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5C82E9F27FCB059003931EE /* HomeworkAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeworkAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C82EA227FCB059003931EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C82EA427FCB059003931EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5C82EA627FCB059003931EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5C82EA627FCB059003931EE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A5C82EA927FCB059003931EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5C82EAB27FCB05A003931EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5C82EAE27FCB05A003931EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5C82EB027FCB05A003931EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C82EB627FCB1CB003931EE /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		A5C82EB927FCB408003931EE /* DismissInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissInteractionController.swift; sourceTree = "<group>"; };
+		A5C82EBB27FCB422003931EE /* DismissImageAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissImageAnimation.swift; sourceTree = "<group>"; };
+		A5C82EBD27FCB436003931EE /* ImagePresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresentationAnimator.swift; sourceTree = "<group>"; };
+		A5C82EBF27FCB447003931EE /* ImagePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresentationController.swift; sourceTree = "<group>"; };
+		A5C82EC127FCB454003931EE /* ImageTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransitioningDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,29 @@
 		A5C82EA127FCB059003931EE /* HomeworkAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				A5C82EB827FCB3F1003931EE /* Animation */,
 				A5C82EA227FCB059003931EE /* AppDelegate.swift */,
 				A5C82EA427FCB059003931EE /* SceneDelegate.swift */,
-				A5C82EA627FCB059003931EE /* ViewController.swift */,
+				A5C82EA627FCB059003931EE /* MainViewController.swift */,
+				A5C82EB627FCB1CB003931EE /* ImageViewController.swift */,
 				A5C82EA827FCB059003931EE /* Main.storyboard */,
 				A5C82EAB27FCB05A003931EE /* Assets.xcassets */,
 				A5C82EAD27FCB05A003931EE /* LaunchScreen.storyboard */,
 				A5C82EB027FCB05A003931EE /* Info.plist */,
 			);
 			path = HomeworkAnimation;
+			sourceTree = "<group>";
+		};
+		A5C82EB827FCB3F1003931EE /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A5C82EB927FCB408003931EE /* DismissInteractionController.swift */,
+				A5C82EBB27FCB422003931EE /* DismissImageAnimation.swift */,
+				A5C82EBD27FCB436003931EE /* ImagePresentationAnimator.swift */,
+				A5C82EBF27FCB447003931EE /* ImagePresentationController.swift */,
+				A5C82EC127FCB454003931EE /* ImageTransitioningDelegate.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C82EA727FCB059003931EE /* ViewController.swift in Sources */,
+				A5C82EC227FCB454003931EE /* ImageTransitioningDelegate.swift in Sources */,
+				A5C82EA727FCB059003931EE /* MainViewController.swift in Sources */,
+				A5C82EBE27FCB436003931EE /* ImagePresentationAnimator.swift in Sources */,
 				A5C82EA327FCB059003931EE /* AppDelegate.swift in Sources */,
+				A5C82EB727FCB1CB003931EE /* ImageViewController.swift in Sources */,
+				A5C82EBC27FCB422003931EE /* DismissImageAnimation.swift in Sources */,
+				A5C82EC027FCB447003931EE /* ImagePresentationController.swift in Sources */,
+				A5C82EBA27FCB408003931EE /* DismissInteractionController.swift in Sources */,
 				A5C82EA527FCB059003931EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

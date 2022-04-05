@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hmj-di-DdN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Image View Controller-->
+        <scene sceneID="4KZ-Wm-XCK">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="ImageViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DSq-G1-rdL" customClass="ImageViewController" customModule="HomeworkAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hBg-yK-eNH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z7o-JG-Y7A">
+                                <rect key="frame" x="0.0" y="265.5" width="414" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="qB4-Zg-8CO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VwG-rP-X5J"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z7o-JG-Y7A" firstAttribute="centerX" secondItem="VwG-rP-X5J" secondAttribute="centerX" id="NrL-jT-OqH"/>
+                            <constraint firstItem="Z7o-JG-Y7A" firstAttribute="centerY" secondItem="VwG-rP-X5J" secondAttribute="centerY" id="XD6-eI-MRe"/>
+                            <constraint firstItem="Z7o-JG-Y7A" firstAttribute="width" secondItem="hBg-yK-eNH" secondAttribute="width" id="kzB-iZ-mCm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SzZ-3K-Zk8"/>
+                    <connections>
+                        <outlet property="imageHeight" destination="qB4-Zg-8CO" id="Hs4-YF-kjH"/>
+                        <outlet property="imageView" destination="Z7o-JG-Y7A" id="L5a-vY-Dx0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TeF-9o-fqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="732" y="100"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="bQr-eP-kMx">
+            <objects>
+                <viewController id="hmj-di-DdN" customClass="MainViewController" customModule="HomeworkAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lx0-8w-xHa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="JIZ-vJ-GtC">
+                                <rect key="frame" x="87" y="302" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JIZ-vJ-GtC" secondAttribute="height" multiplier="1:1" id="c29-EV-WSM"/>
+                                    <constraint firstAttribute="width" constant="240" id="hFq-fL-xFp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgq-so-pLZ">
+                                <rect key="frame" x="87" y="302" width="240" height="240"/>
+                                <connections>
+                                    <segue destination="DSq-G1-rdL" kind="show" identifier="imageTransition" id="hiq-63-xqw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzK-PX-fE1">
+                                <rect key="frame" x="88" y="735" width="66" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <action selector="backButton:" destination="hmj-di-DdN" eventType="touchUpInside" id="JI9-Lz-yZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8v-SE-XD3">
+                                <rect key="frame" x="256" y="734" width="75" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вперед"/>
+                                <connections>
+                                    <action selector="nextButton:" destination="hmj-di-DdN" eventType="touchUpInside" id="qbZ-Pt-xAD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BAh-BP-Qb5"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mgq-so-pLZ" firstAttribute="centerX" secondItem="JIZ-vJ-GtC" secondAttribute="centerX" id="3Uy-7s-tpt"/>
+                            <constraint firstItem="BAh-BP-Qb5" firstAttribute="trailing" secondItem="g8v-SE-XD3" secondAttribute="trailing" constant="83" id="5lE-j5-yCI"/>
+                            <constraint firstItem="JIZ-vJ-GtC" firstAttribute="leading" secondItem="BAh-BP-Qb5" secondAttribute="leading" constant="87" id="8jX-6c-6l6"/>
+                            <constraint firstItem="XzK-PX-fE1" firstAttribute="leading" secondItem="BAh-BP-Qb5" secondAttribute="leading" constant="88" id="8sh-wq-KgP"/>
+                            <constraint firstItem="BAh-BP-Qb5" firstAttribute="bottom" secondItem="g8v-SE-XD3" secondAttribute="bottom" constant="97" id="AFS-e6-KNI"/>
+                            <constraint firstItem="mgq-so-pLZ" firstAttribute="centerY" secondItem="JIZ-vJ-GtC" secondAttribute="centerY" id="LZX-mW-ose"/>
+                            <constraint firstItem="JIZ-vJ-GtC" firstAttribute="centerY" secondItem="Lx0-8w-xHa" secondAttribute="centerY" constant="-26" id="Zdk-KW-EUG"/>
+                            <constraint firstItem="mgq-so-pLZ" firstAttribute="width" secondItem="JIZ-vJ-GtC" secondAttribute="width" id="exP-hS-iW4"/>
+                            <constraint firstItem="mgq-so-pLZ" firstAttribute="height" secondItem="JIZ-vJ-GtC" secondAttribute="height" id="xli-vx-fv0"/>
+                            <constraint firstItem="BAh-BP-Qb5" firstAttribute="bottom" secondItem="XzK-PX-fE1" secondAttribute="bottom" constant="96" id="zrt-wr-534"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="JIZ-vJ-GtC" id="Znw-bF-51N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3Q-Of-OIu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="100"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beach" width="2992" height="3992"/>
+    </resources>
 </document>
