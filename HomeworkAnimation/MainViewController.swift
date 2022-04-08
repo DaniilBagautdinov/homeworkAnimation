@@ -37,12 +37,12 @@ class MainViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: Any) {
         if count < 3 {
-            animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) { [self] in
+            animator = UIViewPropertyAnimator(duration: 0.3, curve: .easeInOut) { [self] in
                 imageView?.alpha = 0.0
             }
             animator.startAnimation()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
-                animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) { [self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
+                animator = UIViewPropertyAnimator(duration: 0.3, curve: .easeInOut) { [self] in
                     imageView.image = UIImage(named: "\(count)")
                     imageView?.alpha = 1.0
                 }
@@ -54,12 +54,12 @@ class MainViewController: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         if count > 1 {
-            animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) { [self] in
+            animator = UIViewPropertyAnimator(duration: 0.3, curve: .easeInOut) { [self] in
                 imageView?.alpha = 0.0
             }
             animator.startAnimation()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
-                animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) { [self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [self] in
+                animator = UIViewPropertyAnimator(duration: 0.3, curve: .easeInOut) { [self] in
                     imageView.image = UIImage(named: "\(count)")
                     imageView?.alpha = 1.0
                 }
