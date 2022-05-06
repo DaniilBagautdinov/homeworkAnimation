@@ -1,2 +1,2 @@
 # homeworkAnimation
-![](May-06-2022 15-22-07.gif)
+![](https://github.com/DaniilBagautdinov/homeworkAnimation/blob/main/May-06-2022%2015-22-07.gif)
